@@ -8,6 +8,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
+/**
+ * - - - - - - - - - -
+ * picture 控制类
+ * - - - - - - - - - -
+ */
+
 @CrossOrigin
 @RestController
 @RequestMapping("/h")
@@ -16,7 +22,12 @@ public class HPictureController
     @Autowired
     HPictureService hPictureService;
 
-    @GetMapping("getHPictureRandomList")
+    /**
+     * @author SRIC
+     *
+     * 获取 picture 随机列表
+     */
+    @GetMapping("/getHPictureRandomList")
     public List<HPicture> getHPictureRandomList()
     {
         return hPictureService.getHPictureRandomList();
